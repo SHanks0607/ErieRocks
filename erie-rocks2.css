@@ -1,0 +1,65 @@
+/* for demo purposes */
+.card {
+    margin: 10px 10px;
+  }
+  
+  /* Flip Cards CSS */
+  .card-container {
+    display: grid;
+    perspective: 700px;
+    
+  }
+  
+  .card-flip {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    grid-template-areas: "frontAndBack";
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+  }
+  
+  .card-flip div {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+  
+  .front {
+    grid-area: frontAndBack;
+  }
+  
+  .back {
+    grid-area: frontAndBack;
+    transform: rotateY(-180deg);
+  }
+  
+  .card-container:hover .card-flip {
+    transform: rotateY(180deg);
+  }
+
+  .front-title {
+      text-align: center;
+  }
+
+  #title {
+      text-align: center;
+      color: white;
+  }
+
+  #subtitle {
+      text-align: center;
+      color: rgb(170, 142, 142)
+  }
+
+  body {
+    background: #870000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #190A05, #870000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #190A05, #870000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+  }
+  
+  .line {
+    border-top: 1px solid rgba(170, 142, 142, .5)
+  }
+  
+  .card-link {
+    color: #870000;
+  }
